@@ -1,0 +1,39 @@
+Name: aeson-query
+Version: 0.0
+License: PublicDomain
+License-file: LICENSE
+Author: Jaime Marquínez Ferrándiz
+Maintainer: jaime.marquinez.ferrandiz@gmail.com   
+Homepage: https://github.com/jaimeMF/aeson-query
+Build-type: Simple
+Cabal-version: >=1.10
+
+Library
+    Hs-Source-Dirs: src
+    Exposed-modules:
+        Data.Aeson.Query,
+        Data.Aeson.Query.Filter,
+        Data.Aeson.Query.Parser,
+        Data.Aeson.Query.Filter.Functions
+    Other-modules:
+        Data.Aeson.Query.AesonUtils    
+    Build-depends: 
+        base >=4.6 && <4.7,
+        aeson,
+        vector,
+        aeson-pretty,
+        bytestring,
+        text,
+        parsec
+    Default-language: Haskell2010
+
+Executable aeson-query
+    Main-is: aeson-query.hs
+    Build-depends:
+        base >=4.6 && <4.7,
+        aeson-query,
+        aeson,
+        aeson-pretty,
+        bytestring
+    Default-language: Haskell2010
+    
